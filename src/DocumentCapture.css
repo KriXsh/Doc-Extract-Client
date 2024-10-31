@@ -1,0 +1,126 @@
+/* DocumentCapture.css */
+
+.document-capture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 10px; /* Padding to prevent overflow on mobile */
+    background-image: url('../public/backImge.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+.capture-form {
+    background-color: white; /* White background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Make form full width */
+    max-width: 400px; /* Max width for form */
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.capture-form h1 {
+    color: black; /* Black text for the title */
+    text-align: center; /* Center align title */
+}
+
+.capture-form label {
+    color: black; /* Black text for labels */
+    display: block; /* Make labels block elements */
+    margin: 10px 0 5px; /* Space out labels */
+}
+
+.capture-form input[type="file"] {
+    margin-bottom: 15px; /* Space below file input */
+}
+
+.capture-form button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding for the button */
+    background-color: black; /* Button background */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 10px; /* Space above button */
+}
+
+.capture-form button:hover {
+    background-color: #444; /* Darker shade on hover */
+}
+
+/* Loader Styles */
+.loader {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    position: relative;
+}
+
+.loader:before {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background: #f0808050;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow324 0.5s linear infinite;
+}
+
+.loader:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #f08080;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    animation: jump7456 0.5s linear infinite;
+}
+
+/* Loader Message */
+.loader-message {
+    text-align: center;
+    font-size: 20px; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    color: black; /* Set color to black */
+    margin-top: 10px; /* Margin for spacing */
+}
+
+/* Response and Error Container Styles */
+.response-container,
+.error-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white; /* White text */
+    padding: 20px; /* Increased padding for better spacing */
+    margin-top: 15px;
+    border-radius: 10px; /* Round corners for better aesthetics */
+    width: 100%; /* Full width for the response */
+    max-width: 400px; /* Set max width for better visibility */
+    text-align: left; /* Align text to the left */
+    overflow-wrap: break-word; /* Allow wrapping for long text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.response-container button,
+.error-container button {
+    margin-top: 10px;
+    background-color: black; /* Button for response section */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.response-container button:hover,
+.error-container button:hover {
+    background-color: #444; /* Darker shade on hover */
+}
